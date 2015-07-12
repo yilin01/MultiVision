@@ -1,12 +1,17 @@
 {
-  "name": "MultiVision",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
+    "name": "MultiVision",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "engines": {
+        
+        "node": "0.12.x",
+        "npm": "2.5.x"
+    },
   "author": "YiLin",
   "license": "ISC",
   "dependencies": {

@@ -1,0 +1,67 @@
+extends ../includes/layout
+
+block main-content
+  .wraper
+
+    .header-v5.header-static
+      .topbar-v3
+        div(ng-include="'/partials/account/navbar-login'")
+      .navbar.navbar-default.mega-menu
+        .container
+          .navbar-header
+            button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-responsive-collapse")
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href="/")
+              img#logo-header(src="/images/Logo.png", alt="Logo")
+          .collapse.navbar-collapse.navbar-responsive-collapse
+            ul.list-inline.shop-badge.badge-lists.badge-icons.pull-right
+              li
+                a(href="#")
+                  i.fa.fa-shopping-cart
+                span.badge.badge-sea.rounded-x 3
+                ul.list-unstyled.badge-open.mCustomScrollbar(data-mcs-theme="minimal-dark")
+                  li
+                    img(src="assets/img/thumb/05.jpg")
+                    button.close(type="button") ×
+                    div.overflow-h
+                      span Black Glasses
+                      small 1 x $400.00
+                  li
+                    img(src="assets/img/thumb/05.jpg")
+                    button.close(type="button") ×
+                    div.overflow-h
+                      span Black Glasses
+                      small 1 x $400.00
+                  li
+                    img(src="assets/img/thumb/05.jpg")
+                    button.close(type="button") ×
+                    div.overflow-h
+                      span Black Glasses
+                      small 1 x $400.00
+
+                  li.subtotal
+                    div.overflow-h.margin-bottom-10
+                      span Subtotal
+                      span.pull-right.subtotal-cost $1200.00
+                    div.row
+                      div.col-xs-6
+                        a.btn-u.btn-brd.btn-brd-hover.btn-u-sea-shop.btn-block(href="shop-ui-inner.html") View Cart
+                      div.col-xs-6
+                        a.btn-u.btn-u-sea-shop.btn-block(href="shop-ui-add-to-cart.html") Checkout
+
+            ul.nav.navbar-nav
+              li.dropdown
+                a.dropdown-toggle(data-hover="dropdown", data-toggle="dropdown",href="/courses") Courses
+              li.dropdown.active
+                a.dropdown-toggle(data-hover="dropdown", data-toggle="dropdown",href="/products") Products
+
+
+
+    section.content
+      div(ng-view)
+
+    footer.container.text-center
+      p &copy; 2015 Highland Software(Mike Zhang).

@@ -1,6 +1,17 @@
-﻿var http = require('http');
-var port = process.env.port || 1337;
-http.createServer(function (req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello World\n');
-}).listen(port);
+﻿var express = require('express');
+
+var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+
+var app = express();
+
+app.set('views', __dirname + '/server/views');
+app.set('view engine', 'jade');
+
+app.get('/', function (req, res) { 
+    res.render('Jade1');
+});
+
+var port = process.env.PORT || 3030;
+app.listen(port);
+console.log('Listening on port ' + port + '....');
+
